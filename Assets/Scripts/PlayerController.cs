@@ -7,17 +7,22 @@ public class PlayerController : MonoBehaviour
 
     private float HorizontalInput;
     private float VerticalInput;
-    public float speed = 10;
-    private float turnspeed = 20;
+    public float speed = 15;
+    private float turnspeed = 25;
 
     private float xMax = 200; //max horizontal
     private float yMax = 200; //max vertical
     private float yMin = 0; //min Vertocal
     private float zMax = 200; //max z
+  
+    private int objective = 10;
+    public GameObject municionprefab;
+    private Vector3 offset = new Vector3(0,0,10);
+
 
     void Start()
     {
-        
+
     }
 
 
@@ -25,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         HorizontalInput = Input.GetAxis("Horizontal"); //asociamos el float HorizontalInput a la presion sobre las teclas A y D del teclado A negativa y D positiva
         VerticalInput = Input.GetAxis("Vertical"); //asociamos la variable VerticalInput a la presion sobre las teclas W y S del teclado W positiva y S negativa
+
 
         //movimiento hacia adelante automática
         transform.Translate(Vector3.right * speed * Time.deltaTime);
@@ -34,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.x > xMax) //si sobrepasa el limite horizontal por la derecha
         {
-            transform.position = new Vector3 (xMax, transform.position.y, transform.position.z);
+            transform.position = new Vector3(xMax, transform.position.y, transform.position.z);
         }
 
         if (transform.position.x < -xMax) //si sobrepasa el limite horizontal por la izquierda
@@ -62,7 +68,13 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, -zMax);
         }
 
+        if (Input.GetKeyDown(KeyCode.RightControl))
+        {
+            Instantiate(municionprefab, transform.position + offset, gameObject.transform.rotation);
+        }
 
-
+      
     }
+
+    
 }
