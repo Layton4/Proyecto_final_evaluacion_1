@@ -30,6 +30,7 @@ public class Detectcollition : MonoBehaviour
         {
             Destroy(gameObject); //destruimos el proyectil
             Destroy(otherCollider.gameObject);
+            Debug.Log("Buen Tiro!!");
         }
 
     }

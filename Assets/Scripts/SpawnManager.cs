@@ -31,6 +31,6 @@ public class SpawnManager : MonoBehaviour
     public void SpawnABomb()
     {
         SpawnPosition = RandomSpawnPosition();
-        Instantiate(Obstacleprefab, SpawnPosition, Obstacleprefab.transform.rotation);
+        Instantiate(Obstacleprefab, SpawnPosition, gameObject.transform.rotation);
     }
 }

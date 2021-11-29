@@ -33,10 +33,10 @@ public class PlayerController : MonoBehaviour
 
 
         //movimiento hacia adelante automática
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         transform.Rotate(Vector3.up * turnspeed * Time.deltaTime * HorizontalInput); //con A y D rotaremos en eje Y
-        transform.Rotate(Vector3.forward * turnspeed * Time.deltaTime * VerticalInput); //Con W y S rotaremos en eje X
+        transform.Rotate(Vector3.right * turnspeed * Time.deltaTime * VerticalInput); //Con W y S rotaremos en eje X
 
         if (transform.position.x > xMax) //si sobrepasa el limite horizontal por la derecha
         {
