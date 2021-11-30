@@ -18,11 +18,12 @@ public class PlayerController : MonoBehaviour
     private int objective = 10;
     public GameObject municionprefab;
     private Vector3 offset = new Vector3(0,0,10);
+    private Vector3 initialpos = new Vector3(0, 100, 0);
 
 
     void Start()
     {
-
+        transform.position = initialpos;
     }
 
 
