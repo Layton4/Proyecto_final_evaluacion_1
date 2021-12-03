@@ -291,7 +291,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6206392246445900810}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -779,7 +779,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6206392246607954315}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -2303,7 +2303,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6206392247251231600}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -2399,7 +2399,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6206392247302452360}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -3645,7 +3645,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6206392247895831424}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -3934,7 +3934,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6206392248093185643}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -4641,6 +4641,7 @@ GameObject:
   - component: {fileID: 6919948799847557959}
   - component: {fileID: 5599487395476430334}
   - component: {fileID: -4643531058281252601}
+  - component: {fileID: -1985162699231227333}
   m_Layer: 0
   m_Name: Helicopeto_apache_comb
   m_TagString: Untagged
@@ -4692,3 +4693,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9107962, z: 5.1580095}
   m_Center: {x: 0, y: -0.21682072, z: -0.6336646}
+--- !u!114 &-1985162699231227333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130585026512038628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e1c7a6aff704c4c9e1e9ce2ce204a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  municionprefab: {fileID: 2915622284330722799, guid: 0bba36c88aba4c9409fbe1674047fde3,
+    type: 3}
