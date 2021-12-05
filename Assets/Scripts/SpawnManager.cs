@@ -10,15 +10,13 @@ public class SpawnManager : MonoBehaviour
     private float ylim_sup = 200;
     private float ylim_inf = 0;
     private float zRange = 200;
-    private Vector3 SpawnPosition = new Vector3(0, 0, 30);
     public float tiempo_start = 0.5f;
     public float tiempo_repetición = 5f;
+    private Vector3 SpawnPosition = new Vector3(0, 0, 30);
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnABomb", 0.5f, 5);
+        InvokeRepeating("SpawnAObject", tiempo_start, tiempo_repetición);
     }
     public Vector3 RandomSpawnPosition() //función para conseguir una localización aleatoria, Vector3, para el obstáculo
     {
@@ -27,10 +25,9 @@ public class SpawnManager : MonoBehaviour
         float randoZ = Random.Range(-zRange, zRange);
         return new Vector3(randoX,randoY,randoZ);
     }
-
-    public void SpawnABomb()
+    public void SpawnAObject()
     {
         SpawnPosition = RandomSpawnPosition();
-        Instantiate(Obstacleprefab, SpawnPosition, gameObject.transform.rotation);
+        Instantiate(Obstacleprefab, SpawnPosition, Obstacleprefab.transform.rotation);
     }
 }

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private float HorizontalInput;
     private float VerticalInput;
     public float speed = 15;
-    private float turnspeed = 25;
+    public float turnspeed = 25;
 
     private float xMax = 200; //max horizontal
     private float yMax = 200; //max vertical
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
   
     private int objective = 10;
     public GameObject municionprefab;
-    private Vector3 offset = new Vector3(0,0,10);
+    private Vector3 offset = new Vector3(0,-2,1);
     private Vector3 initialpos = new Vector3(0, 100, 0);
 
 
@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(Vector3.up * turnspeed * Time.deltaTime * HorizontalInput); //con A y D rotaremos en eje Y
         transform.Rotate(Vector3.left * turnspeed * Time.deltaTime * VerticalInput); //Con W y S rotaremos en eje X
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        }
 
         if (transform.position.x > xMax) //si sobrepasa el limite horizontal por la derecha
         {

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Detectcollition : MonoBehaviour
 {
-      private int counter;
+      private int counter = 0;
+    private int objective = 10;
     void Update()
     {
         
@@ -12,27 +13,40 @@ public class Detectcollition : MonoBehaviour
 
  
 
-    /*private void OnTriggerEnter(Collider otherCollider) //cuando se choque con algo en su collider
+    private void OnTriggerEnter(Collider otherCollider) //cuando se choque con algo en su collider
     {
 
-        if (otherCollider.gameObject.tag == "diamante")
+        if (gameObject.CompareTag("Player") && otherCollider.gameObject.CompareTag ("diamante"))
         {
-            Debug.Log($"Diamantes {counter}/5");
-            counter += counter;
-            if (counter >= 5)
+            Destroy(otherCollider.gameObject);
+            counter += 1;
+            Debug.Log($"Diamantes {counter}/{objective}");
+            if (counter >= objective)
             {
                 Debug.Log("CONGRATULATIONS! YOU WIN!!");
                 Time.timeScale = 0;
             }
         }
 
-        else
+        if (gameObject.CompareTag("Player") && otherCollider.gameObject.CompareTag("bomba"))
         {
             Destroy(gameObject); //destruimos el proyectil
             Destroy(otherCollider.gameObject);
-            Debug.Log("Buen Tiro!!");
+            Debug.Log("HAS MUERTO! GameOver");
+            Time.timeScale = 0;
         }
 
-    }*/
+        if (gameObject.CompareTag("Misil") && otherCollider.gameObject.CompareTag("bomba"))
+        {
+            Destroy(otherCollider.gameObject);
+            Debug.Log("Buen tiro!");
+        }
+
+       else
+        {
+
+        }
+
+    }
 
 }
