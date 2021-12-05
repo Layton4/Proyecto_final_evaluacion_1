@@ -39,11 +39,6 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(Vector3.up * turnspeed * Time.deltaTime * HorizontalInput); //con A y D rotaremos en eje Y
         transform.Rotate(Vector3.left * turnspeed * Time.deltaTime * VerticalInput); //Con W y S rotaremos en eje X
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
-        }
-
         if (transform.position.x > xMax) //si sobrepasa el limite horizontal por la derecha
         {
             transform.position = new Vector3(xMax, transform.position.y, transform.position.z);
