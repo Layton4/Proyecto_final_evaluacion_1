@@ -12,7 +12,7 @@ public class Detectcollition : MonoBehaviour
 
  
 
-    private void OnTriggerEnter(Collider otherCollider) //cuando se choque con algo en su collider
+    /*private void OnTriggerEnter(Collider otherCollider) //cuando se choque con algo en su collider
     {
 
         if (otherCollider.gameObject.tag == "diamante")
@@ -33,6 +33,6 @@ public class Detectcollition : MonoBehaviour
             Debug.Log("Buen Tiro!!");
         }
 
-    }
+    }*/
 
 }
