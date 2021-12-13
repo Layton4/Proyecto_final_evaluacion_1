@@ -42,11 +42,6 @@ public class Detectcollition : MonoBehaviour
             Debug.Log("Buen tiro!");
         }
 
-       else
-        {
-
-        }
-
     }
 
 }
