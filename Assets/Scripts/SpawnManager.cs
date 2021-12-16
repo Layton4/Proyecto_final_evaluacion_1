@@ -12,7 +12,7 @@ public class SpawnManager : MonoBehaviour
     private float zRange = 200;
     public float tiempo_start = 0.5f;
     public float tiempo_repetición = 5f;
-    private Vector3 SpawnPosition = new Vector3(0, 0, 30);
+    private Vector3 SpawnPosition;
 
     void Start()
     {
